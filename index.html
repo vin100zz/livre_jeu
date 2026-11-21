@@ -4,7 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Les Enfants de Brumeval</title>
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap">
+<link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
 <div class="lucioles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
@@ -32,13 +35,24 @@
   <!-- Jeu -->
   <section id="ecran-jeu" class="ecran" hidden>
     <header id="hud">
-      <div class="pv"><span class="lbl">Vie</span><div class="barre"><div id="pv-fill"></div></div><span id="pv-txt"></span></div>
-      <div class="stats">
-        <span title="Attaque">⚔ <b id="st-atk"></b></span>
-        <span title="Défense">🛡 <b id="st-def"></b></span>
-        <span title="Pièces d'or">🪙 <b id="st-or"></b></span>
+      <div class="hud-haut">
+        <div class="pv" title="Points de vie">
+          <svg class="ico ico-vie" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.6-9.3C.9 8.2 3 4.5 6.6 4.5c2 0 3.5 1 5.4 3 1.9-2 3.4-3 5.4-3 3.6 0 5.7 3.7 4.2 7.2C19.500 16.400 12 21 12 21z" fill="currentColor"/></svg>
+          <div class="barre"><div id="pv-fill"></div><span id="pv-txt" class="barre-txt"></span></div>
+        </div>
+        <div class="stats">
+          <span class="stat" title="Attaque">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4 9.500 14.500"/><path d="M20 4h-5l-1 4"/><path d="M20 4v5l-4 1"/><path d="m6.500 11.500 6 6"/><path d="m9.500 14.500-5 5"/><path d="m3.500 20.500 2-2"/></g></svg>
+            <b id="st-atk"></b><i>Attaque</i></span>
+          <span class="stat" title="Défense">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.500 20 5.500v6c0 5-3.400 8.600-8 10-4.600-1.400-8-5-8-10v-6z" fill="currentColor"/></svg>
+            <b id="st-def"></b><i>Défense</i></span>
+          <span class="stat stat-or" title="Pièces d'or">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.500" fill="currentColor"/></svg>
+            <b id="st-or"></b><i>Or</i></span>
+        </div>
       </div>
-      <div id="inventaire" class="inventaire"></div>
+      <div class="sac"><span class="lbl">Sac</span><div id="inventaire" class="inventaire"></div></div>
     </header>
     <div id="notes" class="notes" aria-live="polite"></div>
     <article id="texte" class="texte"></article>
