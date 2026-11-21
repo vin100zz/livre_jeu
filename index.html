@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Les Enfants de Brumeval</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="lucioles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+<main id="app">
+  <!-- Écran titre -->
+  <section id="ecran-titre" class="ecran">
+    <p class="surtitre">Un conte de la forêt de Brumeval</p>
+    <h1>Les Enfants<br>de Brumeval</h1>
+    <p class="accroche">Sept enfants ont disparu du village de Hautgué. Chacun accuse quelqu'un d'autre. Dans la forêt, personne n'est tout à fait ce qu'il paraît.</p>
+    <div class="boutons">
+      <button id="btn-nouvelle" class="principal">Nouvelle partie</button>
+      <button id="btn-continuer" hidden>Continuer</button>
+    </div>
+    <p id="meta-info" class="discret"></p>
+  </section>
+
+  <!-- Choix du don -->
+  <section id="ecran-don" class="ecran" hidden>
+    <h2>Ce que vous emportez</h2>
+    <p class="discret">Le soir de votre départ, une seule chose tient dans votre sac.</p>
+    <div id="liste-dons" class="dons"></div>
+  </section>
+
+  <!-- Jeu -->
+  <section id="ecran-jeu" class="ecran" hidden>
+    <header id="hud">
+      <div class="pv"><span class="lbl">Vie</span><div class="barre"><div id="pv-fill"></div></div><span id="pv-txt"></span></div>
+      <div class="stats">
+        <span title="Attaque">⚔ <b id="st-atk"></b></span>
+        <span title="Défense">🛡 <b id="st-def"></b></span>
+        <span title="Pièces d'or">🪙 <b id="st-or"></b></span>
+      </div>
+      <div id="inventaire" class="inventaire"></div>
+    </header>
+    <div id="notes" class="notes" aria-live="polite"></div>
+    <article id="texte" class="texte"></article>
+    <div id="combat" class="combat" hidden></div>
+    <nav id="choix" class="choix"></nav>
+    <footer class="pied">
+      <button id="btn-accueil" class="discret-btn">Accueil</button>
+    </footer>
+  </section>
+</main>
+
+<script src="story.js"></script>
+<script src="story2.js"></script>
+<script src="engine.js"></script>
+</body>
+</html>
